@@ -1,7 +1,9 @@
 # fetch_news.py
 import requests
-from config import NEWS_API_KEY
 from datetime import datetime, timedelta
+import streamlit as st
+NEWS_API_KEY = st.secrets["NEWS_API_KEY"]
+
 
 def fetch_crypto_news(query="crypto", days=1, max_pages=3):
     url = "https://newsapi.org/v2/everything"
